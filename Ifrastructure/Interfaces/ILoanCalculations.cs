@@ -9,5 +9,6 @@ namespace Infrastructure.Interfaces
     {
         LoanSummaryItem GetSummaryInfo(decimal amount, int paymentsCount, decimal apr);
 
+        IEnumerable<RepaymentScheduleItem> GetRepaymentScheduleInfo(decimal amount, int paymentsCount, decimal apr);
     }
 }

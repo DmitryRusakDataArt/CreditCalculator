@@ -8,5 +8,7 @@ namespace Infrastructure.Interfaces
     public interface ICalculationService
     {
         LoanSummaryItem GetSummaryInfo(decimal amount, decimal apr);
+
+        IEnumerable<RepaymentScheduleItem> GetRepaymentScheduleInfo(decimal amount, decimal apr);
     }
 }

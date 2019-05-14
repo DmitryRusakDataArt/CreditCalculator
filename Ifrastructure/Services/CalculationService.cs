@@ -26,5 +26,16 @@ namespace Infrastructure.Services
         {
             return _loanCalculations.GetSummaryInfo(amount, Constants.PAYMENT_PERIOD, apr);
         }
+
+        /// <summary>
+        /// Serice method for calculating of repayment scheduler
+        /// </summary>
+        /// <param name="amount">Loan amount</param>
+        /// <param name="apr">Annual Percentage Rate</param>
+        /// <returns>List of RepaymentScheduleItem</returns>
+        public IEnumerable<RepaymentScheduleItem> GetRepaymentScheduleInfo(decimal amount, decimal apr)
+        {
+            return _loanCalculations.GetRepaymentScheduleInfo(amount, Constants.PAYMENT_PERIOD, apr);
+        }
     }
 }
